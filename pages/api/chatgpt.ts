@@ -6,12 +6,12 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 })
 
+
 const openai = new OpenAIApi(configuration)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { prompt } = req.body
-
     // ChatGPT
     const content = `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever.\nHuman: ${prompt}\nAI:`
     const response = await openai.createChatCompletion({
@@ -25,6 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ text })
   } catch (error) {
     console.error(error)
-    // res.status(500).send('Something went wrong')
+    res.status(500).send('Something went wrong')
   }
 }

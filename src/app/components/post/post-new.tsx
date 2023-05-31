@@ -38,8 +38,9 @@ const PostNew = () => {
         setRecording(true)
       })
       .catch((error: string) => {
-        console.error(error)
+        console.error(JSON.stringify(error));
       })
+      
   }
 
   // 音声録音停止
@@ -61,7 +62,7 @@ const PostNew = () => {
         setAudioFile(file)
       })
       .catch((error: string) => {
-        console.log(error)
+        console.error(JSON.stringify(error));
         setLoading(false)
       })
 
