@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { format } from 'date-fns'
 import type { PostType } from '../../../../utils/post.types'
+import Image from 'next/image'
 
 // 投稿アイテム
 const PostItem = (post: PostType) => {
@@ -28,10 +29,14 @@ const PostItem = (post: PostType) => {
       {post.content && (
         <div className="mb-5">
           <div className="flex items-center space-x-2 mb-2">
-            <div className="w-8 h-8 rounded-full object-cover bg-yellow-500 flex justify-center items-center text-white text-xs font-bold">
-              A
-            </div>
-            <div className="text-white">AI</div>
+            <Image
+              className="w-10 h-10 rounded-full object-cover bg-yellow-500 flex justify-center items-center text-white text-xs font-bold"
+              src="/careerconsul_avatar.jpg"
+              alt="/next.svg"
+              width="550"
+              height="550"
+            />
+            <div className="text-white">AIカウンセラー</div>
           </div>
 
           <div className="flex items-end space-x-2">

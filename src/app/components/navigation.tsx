@@ -14,7 +14,7 @@ const Navigation = () => {
       </div>
       <div className="flex justify-center">
         <p className="text-xl text-gray">
-          Career Buddyは、生成AIと音声AIを活用したカジュアルにキャリア相談ができるサービスです
+          Career Buddyは、生成AIと音声AIを活用して、アバターにカジュアルにキャリア相談ができるサービスです
         </p>
         
       </div>
